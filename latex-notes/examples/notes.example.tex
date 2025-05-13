@@ -1,0 +1,48 @@
+% --- LaTeX Lecture Notes - H. Kamran ---
+
+% --- Set document class and font size ---
+
+\documentclass[letterpaper, 12pt]{article}
+\input{../preamble.tex}
+\input{../preamble.bib.tex}
+
+% Your bibliography resource
+% \addbibresource[location=remote]{}
+
+\newcommand{\noteCourseId}{Course ID}
+\newcommand{\noteSubject}{Course name}
+\newcommand{\noteCourseProfessor}{Course professor}
+\newcommand{\noteAuthor}{Student name}
+\newcommand{\noteInstitution}{Institution}
+\newcommand{\noteTerm}{Course term}
+
+% PDF Attributes
+\hypersetup{
+    pdftitle={\noteSubject{}},
+    pdfauthor={\noteAuthor{}},
+    pdfsubject={\noteCourseId{} (\noteCourseProfessor{}) - \noteInstitution{}, \noteTerm{}}
+}
+
+% Left header text: Short course title, hyperlinked to table of contents
+\fancyhead[L]{\hyperref[sec:contents]{\small \noteCourseId{} • \noteTerm{}}}
+
+% --- Document starts here ---
+
+\begin{document}
+
+% --- Add title and table of contents ---
+
+% If applicable, `cover.pdf`
+\includepdf[pages=-]{cover.pdf}
+\tableofcontents\label{sec:contents}
+
+% --- Main content: import lectures as subfiles ---
+
+Notes go here using the input command.
+
+\clearpage
+\printbibliography[heading=bibintoc,title={Resources}]
+
+% --- Document ends here ---
+
+\end{document}

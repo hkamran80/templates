@@ -1,0 +1,55 @@
+% --- LaTeX Lecture Notes Template - H. Kamran ---
+
+% --- Set document class and font size ---
+
+\documentclass[letterpaper, 12pt]{article}
+\input{../preamble.math.tex}
+\input{../preamble.tex}
+
+\newcommand{\noteCourseId}{Course ID}
+\newcommand{\noteSubject}{Course name}
+\newcommand{\noteCourseProfessor}{Course professor}
+\newcommand{\noteAuthor}{Student name}
+\newcommand{\noteInstitution}{Institution}
+\newcommand{\noteTerm}{Course term}
+
+% PDF Attributes
+\hypersetup{
+    pdftitle={Assignment Name - \noteSubject{}},
+    pdfauthor={\noteAuthor{}},
+    pdfsubject={\noteCourseId{} (\noteCourseProfessor{}) - \noteInstitution{}, \noteTerm{}}
+}
+
+% Left header text: Short course title, hyperlinked to table of contents
+\fancyhead[L]{\small \noteCourseId{} • \noteTerm{}}
+
+% Commands
+\newcommand*{\carry}[1][1]{\overset{#1}}
+\newcolumntype{B}[1]{r*{#1}{@{\,}r}}
+
+% --- Document starts here ---
+
+\begin{document}
+
+% --- Main title and subtitle ---
+
+\title{Assignment Name \\[0.25em]
+	\normalsize\noteCourseId{} \\[1em]
+	\noteCourseProfessor{} • \noteTerm{}}
+
+% --- Author and date of last update ---
+
+\author{\normalsize\noteAuthor{}}
+\date{\vspace{-1em} \normalsize Assignment Due Date}
+
+% --- Add title and table of contents ---
+
+\maketitle
+
+% --- Main content: import lectures as subfiles ---
+
+Content goes here.
+
+% --- Document ends here ---
+
+\end{document}
