@@ -1,6 +1,7 @@
 % --- LaTeX Notes (Math) Template by H. Kamran ---
 
 % -- Package Imports --
+\let\openbox\relax
 \usepackage{amsmath, amsthm, amssymb, mathtools, dsfont, units, polynom}
 
 % -- Math/Statistics Commands --
@@ -74,6 +75,10 @@
 \newcommand{\Oh}{\mathcal{O}}	% Big-O notation, e.g. $\O(n)$
 \newcommand{\1}{\mathds{1}}	% Indicator function, e.g. $\1_A$
 
+% Carry
+% \newcommand*{\carry}[1][1]{\overset{#1}}
+% \newcolumntype{B}[1]{r*{#1}{@{\,}r}}
+
 % Additional commands for math mode
 \DeclareMathOperator*{\argmax}{argmax}		% Argmax, e.g. $\argmax_{x\in[0,1]} f(x)$
 \DeclareMathOperator*{\argmin}{argmin}		% Argmin, e.g. $\argmin_{x\in[0,1]} f(x)$
@@ -109,6 +114,9 @@
 \makeatletter
 \let\oldabs\abs
 \def\abs{\@ifstar{\oldabs}{\oldabs*}}
+
+% Add command for `given` (source: https://tex.stackexchange.com/a/141685)
+\newcommand\given[1][]{\:#1\vert\:}
 
 % -- Theorems --
 % Numbered theorem, lemma, etc. settings - e.g., a definition, lemma, and theorem appearing in that 

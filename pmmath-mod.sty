@@ -1,0 +1,162 @@
+% LaTeX Commands to Write Math
+% by Pascal Michaillat (https://pascalmichaillat.org/d3)
+% Downloaded from: https://github.com/pmichaillat/latex-math
+
+% Define custom commands with complex argument specifications
+\usepackage{xparse}
+
+% ---- Commands for brackets ----
+
+% Curly brackets
+\newcommand{\bc}[1]{\left\lbrace #1 \right\rbrace}
+
+% Parentheses
+\newcommand{\bp}[1]{\left( #1 \right)}
+
+% Parentheses for function argument
+\newcommand{\of}[1]{{\left( #1 \right)}}
+
+% Square brackets
+\newcommand{\bs}[1]{\left[ #1 \right]}
+
+% Angle brackets
+\newcommand{\ba}[1]{\left< #1 \right>}
+
+% ---- Commands for functions and operators ----
+
+% Logarithm
+\let\oldln\ln
+\RenewDocumentCommand{\ln}{g}{%
+	\IfNoValueTF{#1}{\oldln}%
+	{\,{\oldln}\of{#1}}}
+
+% Standard deviation
+\NewDocumentCommand{\sd}{o g}{%
+	\IfNoValueTF{#2}{\operatorname{sd}\IfValueT{#1}{_{#1}}}%
+	{\,{\operatorname{sd}\IfValueT{#1}{_{#1}}}\of{#2}}}
+
+% Standard error
+\NewDocumentCommand{\se}{o g}{%
+	\IfNoValueTF{#2}{\operatorname{se}\IfValueT{#1}{_{#1}}}%
+	{\,{\operatorname{se}\IfValueT{#1}{_{#1}}}\of{#2}}}
+
+% Probability
+\RenewDocumentCommand{\P}{o g}{%
+	\IfNoValueTF{#2}{\operatorname{\mathbb{P}}\IfValueT{#1}{_{#1}}}%
+	{\,{\operatorname{\mathbb{P}}\IfValueT{#1}{_{#1}}}\of{#2}}}
+
+% ---- Commands for logical relations ----
+
+% Equivalence
+\renewcommand{\iff}{\Leftrightarrow}
+
+% Implication
+\renewcommand{\implies}{\Rightarrow}
+
+% ---- Commands for accents ----
+
+% Create custom accents for symbols in math mode
+\usepackage{accents}
+
+% Underbar
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+
+% Underline
+\newcommand{\ul}[1]{\underline{#1}}
+
+% Arrow
+\newcommand{\oa}[1]{\overrightarrow{#1}}
+
+% Overline
+\newcommand{\ol}[1]{\overline{#1}}
+
+% Wide hat
+\newcommand{\wh}[1]{\widehat{#1}}
+
+% Wide tilde
+\newcommand{\wt}[1]{\widetilde{#1}}
+
+% ---- Commands for complex numbers ----
+
+% Real part
+\renewcommand{\Re}{\operatorname{Re}}
+
+% Imaginary part
+\renewcommand{\Im}{\operatorname{Im}}
+
+
+% ---- Commands for blackboard letters ----
+
+\def\R{\mathbb{R}}
+\def\N{\mathbb{N}}
+\def\Z{\mathbb{Z}}
+\def\Q{\mathbb{Q}}
+\def\C{\mathbb{C}}
+
+
+% ---- Commands for Greek letters ----
+
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\chi}
+\def\d{\delta}
+\def\D{\Delta}
+\def\uD{\upDelta}
+\def\e{\epsilon}
+\def\ve{\varepsilon}
+\def\f{\phi}
+\def\vf{\varphi}
+\def\F{\Phi}
+\def\g{\gamma}
+\def\G{\Gamma}
+\def\h{\eta}
+\def\i{\iota}
+\def\k{\kappa}
+\def\l{\lambda}
+\def\L{\Lambda}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}
+\def\O{\Omega}
+\def\vp{\varpi}
+\def\p{\psi}
+\def\r{\rho}
+\def\s{\sigma}
+\def\S{\Sigma}
+\def\t{\theta}
+\def\vt{\vartheta}
+\def\T{\Theta}
+\def\u{\upsilon}
+\def\U{\Upsilon}
+\def\x{\xi}
+\def\X{\Xi}
+\def\z{\zeta}
+
+% ---- Commands for caligraphic letters ----
+
+\newcommand{\Ac}{\mathcal{A}}
+\newcommand{\Bc}{\mathcal{B}}
+\newcommand{\Cc}{\mathcal{C}}
+\newcommand{\Dc}{\mathcal{D}}
+\newcommand{\Ec}{\mathcal{E}}
+\newcommand{\Fc}{\mathcal{F}}
+\newcommand{\Gc}{\mathcal{G}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\Ic}{\mathcal{I}}
+\newcommand{\Jc}{\mathcal{J}}
+\newcommand{\Kc}{\mathcal{K}}
+\newcommand{\Lc}{\mathcal{L}}
+\newcommand{\Mc}{\mathcal{M}}
+\newcommand{\Nc}{\mathcal{N}}
+\newcommand{\Oc}{\mathcal{O}}
+\newcommand{\Pc}{\mathcal{P}}
+\newcommand{\Qc}{\mathcal{Q}}
+\newcommand{\Rc}{\mathcal{R}}
+\newcommand{\Sc}{\mathcal{S}}
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Uc}{\mathcal{U}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Wc}{\mathcal{W}}
+\newcommand{\Xc}{\mathcal{X}}
+\newcommand{\Yc}{\mathcal{Y}}
+\newcommand{\Zc}{\mathcal{Z}}
