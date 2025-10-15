@@ -10,8 +10,8 @@ All documents should import `preamble.tex`.
 
 - `preamble.bib.tex`: Bibliography (powered by [BibLaTeX](https://ctan.org/pkg/biblatex))
 
-    Commands:
-      - `\citeinline`: equivalent to `\Citeauthor*{citation}, \citetitle*{citation}`
+  Commands:
+  - `\citeinline`: equivalent to `\Citeauthor*{citation}, \citetitle*{citation}`
 
 - `preamble.math.tex`: Math styling (powered by [amsmath](https://ctan.org/pkg/amsmath) and related
   packages)
