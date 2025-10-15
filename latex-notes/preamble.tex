@@ -101,3 +101,7 @@
 
 % --- Tables ---
 \renewcommand{\arraystretch}{1.2}
+
+% --- Characters ---
+% Source: https://tex.stackexchange.com/a/419287
+\catcode`\·=13 \def\cdottext{\ensuremath\cdot} \let·\cdottext
