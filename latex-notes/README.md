@@ -9,6 +9,10 @@ All documents should import `preamble.tex`.
 ### Optional
 
 - `preamble.bib.tex`: Bibliography (powered by [BibLaTeX](https://ctan.org/pkg/biblatex))
+
+    Commands:
+      - `\citeinline`: equivalent to `\Citeauthor*{citation}, \citetitle*{citation}`
+
 - `preamble.math.tex`: Math styling (powered by [amsmath](https://ctan.org/pkg/amsmath) and related
   packages)
 - `pmmath-mod.sty`: Commands to write math (a subset of [Pascal Michaillat's `math.sty`](https://pascalmichaillat.org/e/),
