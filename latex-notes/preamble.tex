@@ -1,7 +1,6 @@
 % --- LaTeX Notes Template by H. Kamran ---
 
-% -- Package Imports --
-
+% --- Package Imports ---
 % Extended set of colors
 \usepackage[dvipsnames]{xcolor}
 
@@ -17,16 +16,11 @@
 \usepackage[svgnames, table]{xcolor}
 
 % --- Fonts ---
-
 \usepackage{newpxmath}
-\usepackage{fontspec}
-\defaultfontfeatures{Ligatures = TeX, Mapping = tex-text}
-\setmainfont{Nunito Sans}
-\setsansfont{Nunito Sans}
-\renewcommand{\familydefault}{\sfdefault}
+\usepackage{nunito}
+\usepackage[T1]{fontenc}
 
 % --- Page layout settings ---
-
 % Set page margins
 \usepackage[left=0.75in, right=0.75in, top=1.0in, bottom=1.0in, headsep=.2in, footskip=0.35in]{geometry}
 
@@ -66,7 +60,6 @@
 \setlist[itemize]{wide=0pt, leftmargin=16pt, labelwidth=10pt, align=left}
 
 % --- Table of contents settings ---
-
 \usepackage[subfigure]{tocloft}
 
 % Reduce spacing between sections in table of contents
@@ -85,19 +78,17 @@
 \makeatother
 
 % --- Set path for images ---
-
 \graphicspath{{images/}{./images/}}
 
 % --- Left/right header text (to appear on every page) ---
-
 % Do not include a line under header or above footer
 \pagestyle{fancy}
 \renewcommand{\footrulewidth}{0pt}
 \renewcommand{\headrulewidth}{0pt}
 
-% Right header text: Lecture number and title
+% Right header text: Section title
 \renewcommand{\sectionmark}[1]{\markright{#1} }
-\fancyhead[R]{\small\textit{\nouppercase{\rightmark}}}
+\fancyhead[R]{\nunitotabular \small\textit{\nouppercase{\rightmark}}}
 
 % --- Tables ---
 \renewcommand{\arraystretch}{1.2}
