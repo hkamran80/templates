@@ -37,7 +37,7 @@ TYPE_LOWER=$(echo "${TYPE}" | tr '[:upper:]' '[:lower:]')
 # Templates
 NOTE_TEMPLATE="%! TEX root = ../notes.tex
 % First argument to for the table of contents. Second argument is for the page.
-\section[${TYPE} ${LECTURE}: ${NAME} (${DATE}, ${YEAR})]{{${TYPE} ${LECTURE} (${DATE})}"
+\section[${TYPE} ${LECTURE}: ${NAME} (${DATE}, ${YEAR})]{${TYPE} ${LECTURE} (${DATE})}"
 
 NOTE_LINE="input{${TYPE_LOWER}s/${TYPE_LOWER}-${LECTURE}.tex}"
 
