@@ -41,6 +41,18 @@ NOTE_TEMPLATE="%! TEX root = ../notes.tex
 
 NOTE_LINE="input{${TYPE_LOWER}s/${TYPE_LOWER}-${LECTURE}.tex}"
 
+# Check existence
+if [[ -e "$(pwd)/${TYPE_LOWER}s/${TYPE_LOWER}-${LECTURE}.tex" ]]; then
+    while true; do
+        read -p "This ${TYPE_LOWER} already exists. Would you like to continue? " yn
+        case $yn in
+            [Yy]* ) echo "Overwriting ${TYPE_LOWER}."; break;;
+            [Nn]* ) echo "Cancelling."; exit;;
+            * ) echo "Please answer yes or no.";;
+        esac
+    done
+fi
+
 # Output
 printf "%s" "$NOTE_TEMPLATE" > "$(pwd)/${TYPE_LOWER}s/${TYPE_LOWER}-${LECTURE}.tex"
 
